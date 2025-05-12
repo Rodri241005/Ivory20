@@ -4,7 +4,9 @@ $user = "rodrigorrg";
 $password = "36197540";
 $database = "ivorydb";
 
-$conn = new mysqli($servername, $username, $password, $database);
+
+$conn = new mysqli($host, $user, $password, $database);
+
 
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
