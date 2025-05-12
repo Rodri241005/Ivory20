@@ -6,8 +6,7 @@ $password = "36197540";
 $database = "ivorydb";
 
 
-$conexion = mysqli_connect($host, $usuario, $contrasena, $base_datos);
-
+$conn = new mysqli($host, $user, $password, $database);
 
 if ($conn->connect_error) {
     echo json_encode(["error" => "Error de conexión: " . $conn->connect_error]);
