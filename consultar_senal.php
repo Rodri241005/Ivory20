@@ -7,8 +7,8 @@ $user = "rodrigorrg";
 $password = "36197540";
 $database = "ivorydb";
 
-// Conectar a la base de datos
-$conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
+
+$conn = new mysqli($host, $user, $password, $database);
 
 // Verificar si hay error en la conexión
 if ($conn->connect_error) {
