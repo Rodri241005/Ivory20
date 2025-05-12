@@ -2,9 +2,10 @@
 header("Content-Type: application/json");
 
 $host = "db4free.net";
-$user = "rodrigorrg"; 
-$password = "36197540"; 
+$user = "rodrigorrg";
+$password = "36197540";
 $database = "ivorydb";
+
 
 $data = json_decode(file_get_contents("php://input"), true);
 
@@ -23,8 +24,7 @@ if (empty($usuario) || empty($contraseña)) {
     exit;
 }
 
-// Conectar a la base de datos
-$conn = new mysqli($servername, $usernameDB, $passwordDB, $database);
+$conn = new mysqli($host, $user, $password, $database);
 
 // Verificar la conexión
 if ($conn->connect_error) {
