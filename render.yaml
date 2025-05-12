@@ -1,7 +1,9 @@
+
 services:
   - type: web
     name: ivory-backend
     env: docker
     plan: free
-    dockerfilePath: ./Dockerfile
-    autoDeploy: true
+    branch: main
+    dockerfilePath: Dockerfile
+    healthCheckPath: /
