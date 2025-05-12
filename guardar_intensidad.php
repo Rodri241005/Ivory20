@@ -2,11 +2,12 @@
 header("Content-Type: application/json"); 
 
 $host = "db4free.net";
-$user = "rodrigorrg"; 
-$password = "36197540"; 
-$database = "ivorydb";    
+$user = "rodrigorrg";
+$password = "36197540";
+$database = "ivorydb";
 
-$conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
+
+$conn = new mysqli($host, $user, $password, $database);
 
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
