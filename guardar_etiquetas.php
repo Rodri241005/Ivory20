@@ -1,11 +1,13 @@
 <?php
-$host = "db4free.net";
-$user = "rodrigorrg"; 
-$password = "36197540"; 
-$database = "ivorydb"; 
 
-// Conectar a la base de datos
-$conn = new mysqli($servidor, $usuario, $contrasena, $base_datos);
+$host = "db4free.net";
+$user = "rodrigorrg";
+$password = "36197540";
+$database = "ivorydb";
+
+
+$conn = new mysqli($host, $user, $password, $database);
+
 if ($conn->connect_error) {
     http_response_code(500);
     echo json_encode(["error" => "Fallo en la conexión: " . $conn->connect_error]);
